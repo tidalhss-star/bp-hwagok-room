@@ -1,199 +1,621 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 룸싸롱 가격 및 공식 정보 | Hwagok Premium Rooms</title>
+    <meta name="description" content="화곡역 인근 프리미엄 룸싸롱의 투명한 가격 정보와 시설을 소개합니다. 업계 최고 수준의 서비스와 엄선된 시스템을 경험하십시오.">
+    <meta name="keywords" content="화곡 룸싸롱 가격, 화곡 룸, 화곡역 룸싸롱, 화곡 유흥, Hwagok Room Salon">
+    <link rel="canonical" href="https://hwagok-room.pages.dev/">
+    <meta name="robots" content="index, follow">
+
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="화곡 룸싸롱: 격조 높은 공간의 기준">
+    <meta property="og:description" content="화곡 지역에서 가장 정제된 서비스와 합리적인 가격 시스템을 제공합니다.">
+    <meta property="og:url" content="https://hwagok-room.pages.dev/">
+    <meta property="og:image" content="https://hwagok-room.pages.dev/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="화곡 룸싸롱 가격 및 시설 안내">
+    <meta name="twitter:description" content="디테일에 집착하는 공간, 화곡 룸싸롱의 공식 페이지입니다.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NightClub",
+      "name": "화곡 룸싸롱",
+      "image": "https://hwagok-room.pages.dev/logo.png",
+      "@id": "https://hwagok-room.pages.dev",
+      "url": "https://hwagok-room.pages.dev",
+      "telephone": "+821062790862",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "화곡동 주요 상권",
+        "addressLocality": "양천구",
+        "addressRegion": "서울",
+        "postalCode": "07500",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5440,
+        "longitude": 126.8472
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "20:00",
+        "closes": "06:00"
+      },
+      "priceRange": "₩₩₩"
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* CSS Variables: Warm Grid Theme */
+        :root {
+            --primary: #2d2a26;
+            --secondary: #faf8f5;
+            --accent: #e07a5f;
+            --text-body: #4a4a4a;
+            --border-color: #e0e0e0;
+            --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            --spacing-unit: 24px;
+            --section-gap: 120px;
+            --container-width: 960px;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--secondary);
+            color: var(--primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.25rem; font-weight: 600; }
+        p { margin-bottom: 1rem; color: var(--text-body); }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: var(--section-gap) 0;
+            border-bottom: 1px solid rgba(45, 42, 38, 0.1);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-size: 0.9rem;
+            border: 1px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 60vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 48px;
+        }
+
+        .hero-visual {
+            flex: 1;
+            height: 400px;
+            background: linear-gradient(135deg, #e6e2dd 0%, #d8d4cf 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,0.5);
+            top: 50%;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: #fff;
+            padding: 32px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-color: var(--accent);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+
+        /* Pricing Table */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 32px;
+        }
+
+        .price-table th, .price-table td {
+            text-align: left;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .price-table th {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .price-col {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Reviews */
+        .review-card {
+            background: #fff;
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .stars {
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 60px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-info h4 {
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+
+        .footer-info p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            margin-right: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Mobile Responsive */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-gap: 80px;
+            }
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.75rem; }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 60px 0;
+                text-align: left;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .hero-visual {
+                width: 100%;
+                height: 250px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                gap: 16px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
+
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">HWAGOK.</a>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#price">Price</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="tel:01062790862" class="btn-cta">010-6279-0862</a>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="tagline">Premium Lounge in Hwagok</span>
+                <h1>격조의 차이를<br>경험하십시오.</h1>
+                <p style="margin-top: 24px; max-width: 400px;">
+                    화곡 지역에서 유일하게 존재하는 정제된 공간. 
+                    투명한 가격 체계와 최상의 서비스를 제공합니다.
+                </p>
+                <div style="margin-top: 32px;">
+                    <a href="tel:01062790862" class="btn-cta">예약 문의</a>
+                    <a href="#price" class="btn-outline" style="margin-left: 12px;">가격 확인</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract Visual Representation using CSS -->
+                <div style="width: 60%; height: 60%; border: 1px solid #fff; position: relative;">
+                    <div style="position: absolute; top: 20%; left: 20%; width: 40px; height: 40px; background: #e07a5f; opacity: 0.5;"></div>
+                    <div style="position: absolute; bottom: 30%; right: 20%; width: 60px; height: 2px; background: #fff;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Features Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="info-card">
+                        <div class="info-icon">✦</div>
+                        <h3>Transparent Pricing</h3>
+                        <p>모두에게 공평하게 적용되는 투명한 가격 시스템을 운영합니다. 추가 비용 없이 명확한 금액을 제시합니다.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">◈</div>
+                        <h3>Private Space</h3>
+                        <p>방음 및 보안 시스템이 완비된 프라이빗 룸을 제공합니다. 고객의 프라이버시를 최우선으로 존중합니다.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">❖</div>
+                        <h3>Premium Service</h3>
+                        <p>업계 최고 수준의 매니지먼트 시스템을 갖춘 전문 인력이 최상의 서비스를 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price Section -->
+        <section id="price" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="grid-2">
+                    <div>
+                        <span class="tagline">System & Cost</span>
+                        <h2>화곡 룸싸롱 가격 안내</h2>
+                        <p>
+                            고객 만족도를 최우선으로 고려하여 책정된 합리적인 가격입니다.
+                            방문 전 정확한 요금을 확인하시고 계획하시기 바랍니다.
+                        </p>
+                        <div style="margin-top: 24px;">
+                            <ul style="list-style: disc; padding-left: 20px; color: var(--text-body);">
+                                <li style="margin-bottom: 8px;">100% reservation required</li>
+                                <li style="margin-bottom: 8px;">Strict no-show policy</li>
+                                <li>Alcohol & Soft drinks included</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th style="text-align: right;">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Standard Room</td>
+                                    <td class="price-col">문의</td>
+                                </tr>
+                                <tr>
+                                    <td>Deluxe Room</td>
+                                    <td class="price-col">문의</td>
+                                </tr>
+                                <tr>
+                                    <td>Presidential Suite</td>
+                                    <td class="price-col">문의</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Package</td>
+                                    <td class="price-col">문의</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 0.8rem; color: #888; margin-top: 16px;">
+                            * 위 가격은 세금 및 봉사료가 포함된 금액입니다.<br>
+                            * 상황에 따라 변동될 수 있으니 전화 확인을 권장합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UGC Reviews -->
+        <section id="reviews" class="section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 48px;">Customer Experience</h2>
+                <div class="grid-3">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="reviewer-name">김철수</span>
+                            <span>2023.10.12</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p style="margin-top: 12px;">
+                            화곡역 근처에서 이렇게 깔끔한 곳을 찾기가 힘들었습니다. 가격도 명확하고 직원분들 매너가 훌륭하네요. 다음에도 비즈니스 미팅 장소로 이용할 예정입니다.
+                        </p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="reviewer-name">이민호</span>
+                            <span>2023.11.05</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p style="margin-top: 12px;">
+                            분위기가 너무 좋습니다. 시끄럽지 않고 조용해서 대화하기 좋았어요. 가격 대비 만족도가 아주 높습니다. 지인에게 추천했습니다.
+                        </p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="reviewer-name">박지영</span>
+                            <span>2023.12.20</span>
+                        </div>
+                        <div class="stars">★★★★☆</div>
+                        <p style="margin-top: 12px;">
+                            예약 시간이 조금 늦어졌는데도 친절하게 đợi어주셨습니다. 시설이 새것처럼 깨끗하고 음주 상태에서도 안전하게 관리해주는 점이 인상 깊었습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="section" style="text-align: center;">
+            <div class="container">
+                <h2>Ready for the best night?</h2>
+                <p style="margin: 24px auto; max-width: 600px;">
+                    지금 바로 전화하여 자신의 공간을 예약하십시오.
+                    화곡 룸싸롱이 품격 있는 밤을 약속드립니다.
+                </p>
+                <a href="tel:01062790862" class="btn-cta" style="padding: 16px 48px; font-size: 1.1rem;">
+                    010-6279-0862
+                </a>
+            </div>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>HWAGOK ROOM SALON</h4>
+                <p>서울시 양천구 화곡동</p>
+                <p>Tel: 010-6279-0862</p>
+                <p style="margin-top: 16px; font-size: 0.8rem; opacity: 0.5;">
+                    &copy; 2024 Hwagok Room Salon. All rights reserved.
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
