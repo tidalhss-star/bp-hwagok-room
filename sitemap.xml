@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://hwagok-room-trend.namanavi.com/</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/compare-001-c47bkn.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://hwagok-room-trend.namanavi.com/blog.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/guide-003.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://hwagok-room-trend.namanavi.com/about.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/interview-002-1u8ig25.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/myth-001-1u8ig25.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/review-001.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/posts/review-002.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tidalhss-star.github.io/bp-hwagok-room/feed.xml</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
