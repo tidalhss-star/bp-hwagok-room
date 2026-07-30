@@ -170,4 +170,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://hwagok-room-trend.namanavi.com/posts/gemini-coverage-20260731-0012.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
